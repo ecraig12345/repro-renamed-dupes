@@ -2,8 +2,5 @@
   "name": "@renamed-dupes-repro/repo",
   "version": "1.0.0",
   "private": true,
-  "license": "MIT",
-  "workspaces": [
-    "packages/*"
-  ]
+  "license": "MIT"
 }

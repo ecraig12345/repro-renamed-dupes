@@ -1,0 +1,54 @@
+{
+  "@renamed-dupes-repro/app": {
+    "name": "@renamed-dupes-repro/app",
+    "version": "1.0.0",
+    "path": "/<repo>/packages/app",
+    "dependencies": {
+      "@renamed-dupes-repro/good": "0.0.0-workspace--",
+      "@renamed-dupes-repro/weird": "0.0.0-workspace--"
+    },
+    "requiredBy": {}
+  },
+  "@renamed-dupes-repro/good": {
+    "name": "@renamed-dupes-repro/good",
+    "version": "0.0.0-workspace--",
+    "path": "/<repo>/packages/good",
+    "dependencies": {
+      "clsx": "2.1.1"
+    },
+    "requiredBy": {
+      "@renamed-dupes-repro/app@1.0.0": "0.0.0-workspace--"
+    }
+  },
+  "@renamed-dupes-repro/weird": {
+    "name": "@renamed-dupes-repro/weird",
+    "version": "0.0.0-workspace--",
+    "path": "/<repo>/packages/weird",
+    "dependencies": {
+      "classnames": "2.1.1"
+    },
+    "requiredBy": {
+      "@renamed-dupes-repro/app@1.0.0": "0.0.0-workspace--"
+    }
+  },
+  "clsx": {
+    "name": "clsx",
+    "version": "2.1.1",
+    "path": "/<repo>/node_modules/.pnpm/clsx@2.1.1/node_modules/clsx",
+    "dependencies": {},
+    "requiredBy": {
+      "@renamed-dupes-repro/good@0.0.0-workspace--": "^2.1.1"
+    },
+    "isExternal": true
+  },
+  "classnames": {
+    "name": "classnames",
+    "version": "2.1.1",
+    "path": "/<repo>/node_modules/.pnpm/clsx@2.1.1/node_modules/clsx",
+    "dependencies": {},
+    "requiredBy": {
+      "@renamed-dupes-repro/weird@0.0.0-workspace--": "0.0.0-npm-clsx--2-1-1"
+    },
+    "isExternal": true
+  }
+}

@@ -4,7 +4,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "cloudpack:init": "npx @ms-cloudpack/cli init --reset --log-resolve-map --log-bundle-info"
+    "cloudpack:init": "npx @ms-cloudpack/cli init --reset --debug"
   },
   "dependencies": {
     "@renamed-dupes-repro/good": "workspace:*",

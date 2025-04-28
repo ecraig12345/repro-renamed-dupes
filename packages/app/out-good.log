@@ -1,0 +1,25 @@
+- debug     Non-semver dependency found: classnames@npm:clsx@^2.1.1 (in @renamed-dupes-repro/weird@1.0.0 at /<repo>/packages/weird). Cloudpack will attempt to handle this, but it's recommended to use semantic versions only if possible.
+✓ completed Resolving dependencies - Found 5 total packages, no duplicates.
+- debug     Evaluating /<repo>/packages/app with context undefined
+✓ completed Bundle @renamed-dupes-repro/app@1.0.0
+- debug     Enqueuing paths found from /<repo>/packages/app:
+  • /<repo>/packages/good {"parentName":"@renamed-dupes-repro/app","parentVersion":"1.0.0","importedName":"@renamed-dupes-repro/good","versionRequirement":"0.0.0-workspace--"}
+  • /<repo>/packages/weird {"parentName":"@renamed-dupes-repro/app","parentVersion":"1.0.0","importedName":"@renamed-dupes-repro/weird","versionRequirement":"0.0.0-workspace--"}
+- debug     Evaluating /<repo>/packages/good with context {"parentName":"@renamed-dupes-repro/app","parentVersion":"1.0.0","importedName":"@renamed-dupes-repro/good","versionRequirement":"0.0.0-workspace--"}
+- debug     Non-semver dependency found: classnames@npm:clsx@^2.1.1 (in @renamed-dupes-repro/weird@1.0.0 at /<repo>/packages/weird). Cloudpack will attempt to handle this, but it's recommended to use semantic versions only if possible.
+- debug     Evaluating /<repo>/packages/weird with context {"parentName":"@renamed-dupes-repro/app","parentVersion":"1.0.0","importedName":"@renamed-dupes-repro/weird","versionRequirement":"0.0.0-workspace--"}
+✓ completed Bundle @renamed-dupes-repro/good@0.0.0-workspace--
+- debug     Enqueuing paths found from /<repo>/packages/good:
+  • /<repo>/node_modules/.pnpm/clsx@2.1.1/node_modules/clsx {"parentName":"@renamed-dupes-repro/good","parentVersion":"0.0.0-workspace--","importedName":"clsx","versionRequirement":"^2.1.1"}
+✓ completed Bundle @renamed-dupes-repro/weird@0.0.0-workspace--
+- debug     Evaluating /<repo>/node_modules/.pnpm/clsx@2.1.1/node_modules/clsx with context {"parentName":"@renamed-dupes-repro/good","parentVersion":"0.0.0-workspace--","importedName":"clsx","versionRequirement":"^2.1.1"}
+- debug     Enqueuing paths found from /<repo>/packages/weird:
+  • /<repo>/node_modules/.pnpm/clsx@2.1.1/node_modules/clsx {"parentName":"@renamed-dupes-repro/weird","parentVersion":"0.0.0-workspace--","importedName":"classnames","versionRequirement":"0.0.0-npm-clsx--2-1-1"}
+- debug     Skipping /<repo>/node_modules/.pnpm/clsx@2.1.1/node_modules/clsx as it has already been visited.
+- debug     Using cached result for clsx@2.1.1
+✓ completed Bundle clsx@2.1.1
+
+==== Summary for /<repo>/packages/app ====
+4 total packages evaluated in 67ms:
+  • 4 packages evaluated successfully
+  • Totals: 0 errors, 0 warnings

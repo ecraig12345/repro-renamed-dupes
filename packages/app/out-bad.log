@@ -1,0 +1,33 @@
+- debug     Non-semver dependency found: classnames@npm:clsx@^2.1.1 (in @renamed-dupes-repro/weird@1.0.0 at /<repo>/packages/weird). Cloudpack will attempt to handle this, but it's recommended to use semantic versions only if possible.
+✓ completed Resolving dependencies - Found 5 total packages, no duplicates.
+- debug     Evaluating /<repo>/packages/app with context undefined
+✓ completed Bundle @renamed-dupes-repro/app@1.0.0
+- debug     Enqueuing paths found from /<repo>/packages/app:
+  • /<repo>/packages/good {"parentName":"@renamed-dupes-repro/app","parentVersion":"1.0.0","importedName":"@renamed-dupes-repro/good","versionRequirement":"0.0.0-workspace--"}
+  • /<repo>/packages/weird {"parentName":"@renamed-dupes-repro/app","parentVersion":"1.0.0","importedName":"@renamed-dupes-repro/weird","versionRequirement":"0.0.0-workspace--"}
+- debug     Evaluating /<repo>/packages/good with context {"parentName":"@renamed-dupes-repro/app","parentVersion":"1.0.0","importedName":"@renamed-dupes-repro/good","versionRequirement":"0.0.0-workspace--"}
+- debug     Non-semver dependency found: classnames@npm:clsx@^2.1.1 (in @renamed-dupes-repro/weird@1.0.0 at /<repo>/packages/weird). Cloudpack will attempt to handle this, but it's recommended to use semantic versions only if possible.
+- debug     Evaluating /<repo>/packages/weird with context {"parentName":"@renamed-dupes-repro/app","parentVersion":"1.0.0","importedName":"@renamed-dupes-repro/weird","versionRequirement":"0.0.0-workspace--"}
+✓ completed Bundle @renamed-dupes-repro/weird@0.0.0-workspace--
+- debug     Enqueuing paths found from /<repo>/packages/weird:
+  • /<repo>/node_modules/.pnpm/clsx@2.1.1/node_modules/clsx {"parentName":"@renamed-dupes-repro/weird","parentVersion":"0.0.0-workspace--","importedName":"classnames","versionRequirement":"0.0.0-npm-clsx--2-1-1"}
+- debug     Evaluating /<repo>/node_modules/.pnpm/clsx@2.1.1/node_modules/clsx with context {"parentName":"@renamed-dupes-repro/weird","parentVersion":"0.0.0-workspace--","importedName":"classnames","versionRequirement":"0.0.0-npm-clsx--2-1-1"}
+✓ completed Bundle @renamed-dupes-repro/good@0.0.0-workspace--
+- debug     Enqueuing paths found from /<repo>/packages/good:
+  • /<repo>/node_modules/.pnpm/clsx@2.1.1/node_modules/clsx {"parentName":"@renamed-dupes-repro/good","parentVersion":"0.0.0-workspace--","importedName":"clsx","versionRequirement":"^2.1.1"}
+- debug     Skipping /<repo>/node_modules/.pnpm/clsx@2.1.1/node_modules/clsx as it has already been visited.
+
+1 package with errors:
+
+classnames@0.0.0-npm-clsx--2-1-1 - /<repo>/node_modules/.pnpm/clsx@2.1.1/node_modules/clsx
+✗ 1 error
+  ✗ [ensurePackageBundled]
+      Error thrown while bundling: Error: Could not find package classnames in the resolve map.
+          at ensurePackageBundledInternal (file:///<npx>/node_modules/@ms-cloudpack/api-server/lib/apis/ensurePackageBundled.js:68:15)
+          at ensurePackageBundled (file:///<npx>/node_modules/@ms-cloudpack/api-server/lib/apis/ensurePackageBundled.js:16:65)
+          at evaluatePath (file:///<npx>/node_modules/@ms-cloudpack/cli/lib/commands/init/evaluatePath.js:20:30)
+
+4 total packages evaluated:
+  • 3 packages evaluated successfully
+  • 1 package failed
+  • Totals: 1 error, 0 warnings
