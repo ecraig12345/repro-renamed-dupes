@@ -1,0 +1,13 @@
+{
+  "name": "@renamed-dupes-repro/app",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "cloudpack:init": "npx @ms-cloudpack/cli init --reset --log-resolve-map --log-bundle-info"
+  },
+  "dependencies": {
+    "@renamed-dupes-repro/a": "workspace:*",
+    "@renamed-dupes-repro/b": "workspace:*"
+  }
+}

@@ -1,0 +1,40 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}
+
+  packages/a:
+    dependencies:
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+
+  packages/app:
+    dependencies:
+      '@renamed-dupes-repro/a':
+        specifier: workspace:*
+        version: link:../a
+      '@renamed-dupes-repro/b':
+        specifier: workspace:*
+        version: link:../b
+
+  packages/b:
+    dependencies:
+      classnames:
+        specifier: npm:clsx@^2.1.1
+        version: clsx@2.1.1
+
+packages:
+
+  clsx@2.1.1:
+    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
+    engines: {node: '>=6'}
+
+snapshots:
+
+  clsx@2.1.1: {}

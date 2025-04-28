@@ -1,0 +1,9 @@
+{
+  "name": "@renamed-dupes-repro/b",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "classnames": "npm:clsx@^2.1.1"
+  }
+}
