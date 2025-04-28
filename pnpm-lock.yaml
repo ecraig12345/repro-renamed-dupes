@@ -8,22 +8,22 @@ importers:
 
   .: {}
 
-  packages/a:
+  packages/app:
+    dependencies:
+      '@renamed-dupes-repro/good':
+        specifier: workspace:*
+        version: link:../good
+      '@renamed-dupes-repro/weird':
+        specifier: workspace:*
+        version: link:../weird
+
+  packages/good:
     dependencies:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
 
-  packages/app:
-    dependencies:
-      '@renamed-dupes-repro/a':
-        specifier: workspace:*
-        version: link:../a
-      '@renamed-dupes-repro/b':
-        specifier: workspace:*
-        version: link:../b
-
-  packages/b:
+  packages/weird:
     dependencies:
       classnames:
         specifier: npm:clsx@^2.1.1

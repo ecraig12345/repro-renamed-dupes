@@ -7,7 +7,7 @@
     "cloudpack:init": "npx @ms-cloudpack/cli init --reset --log-resolve-map --log-bundle-info"
   },
   "dependencies": {
-    "@renamed-dupes-repro/a": "workspace:*",
-    "@renamed-dupes-repro/b": "workspace:*"
+    "@renamed-dupes-repro/good": "workspace:*",
+    "@renamed-dupes-repro/weird": "workspace:*"
   }
 }
